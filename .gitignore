@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.streamlit/
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+*.log
+*.pdf
+.DS_Store
