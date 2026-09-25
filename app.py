@@ -27,7 +27,7 @@ from emergency_mode import EmergencyBlockEngine
 # Page Config
 st.set_page_config(
     page_title="AI Railway Maintenance Block Optimization Platform",
-    page_icon="🚆",
+    # page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -140,24 +140,24 @@ def main():
     st.sidebar.image("https://img.icons8.com/color/96/000000/train.png", width=55)
     st.sidebar.title("Operations Control")
 
-    st.sidebar.subheader("⭐ Fast Demo Action")
-    if st.sidebar.button("⭐ Load Judge Demo Scenario", type="primary", use_container_width=True):
+    st.sidebar.subheader(" Fast Demo Action")
+    if st.sidebar.button(" Load Judge Demo Scenario", type="primary", use_container_width=True):
         st.session_state.use_judge_demo = True
         st.sidebar.success("Loaded Deterministic Judge Demo Scenario!")
 
-    if st.sidebar.button("🔄 Reset to Random Scenario", use_container_width=True):
+    if st.sidebar.button(" Reset to Random Scenario", use_container_width=True):
         st.session_state.use_judge_demo = False
         st.session_state.custom_requests = []
         st.sidebar.info("Reset to standard operational scenario.")
 
     st.sidebar.markdown("---")
-    st.sidebar.subheader("📌 Dataset Verification")
+    st.sidebar.subheader(" Dataset Verification")
     st.sidebar.markdown(f"**Stations (Real Data):** `{dataset_summary['stations_count']:,}` <span class='badge-real'>REAL DATA</span>", unsafe_allow_html=True)
     st.sidebar.markdown(f"**Trains (Real Data):** `{dataset_summary['trains_count']:,}` <span class='badge-real'>REAL DATA</span>", unsafe_allow_html=True)
     st.sidebar.markdown(f"**Schedules (Real Data):** `{dataset_summary['schedules_count']:,}` <span class='badge-real'>REAL DATA</span>", unsafe_allow_html=True)
 
     st.sidebar.markdown("---")
-    st.sidebar.subheader("⚙️ Simulation & Optimizer Parameters")
+    st.sidebar.subheader(" Simulation & Optimizer Parameters")
     num_requests = st.sidebar.slider("Number of Maintenance Requests", min_value=10, max_value=60, value=25, step=5)
     random_seed = st.sidebar.number_input("Simulation Seed", value=42, step=1)
     max_block_hours = st.sidebar.slider("Max Combined Block Window (Hours)", min_value=2.0, max_value=8.0, value=6.0, step=0.5)
@@ -165,7 +165,7 @@ def main():
     # Generate Data according to mode
     if st.session_state.use_judge_demo:
         df_requests = processor.generate_judge_demo_scenario()
-        st.info("⭐ Currently running **Judge Demo Scenario** (Deterministic: Engineering + Traction + S&T + Conflicts + Shadow Block).")
+        st.info(" Currently running **Judge Demo Scenario** (Deterministic: Engineering + Traction + S&T + Conflicts + Shadow Block).")
     else:
         df_requests = processor.generate_demo_maintenance_requests(num_requests=num_requests, seed=random_seed)
 
@@ -262,7 +262,7 @@ def main():
             st.markdown(f'<div class="kpi-card"><div class="kpi-value">3</div><div class="kpi-label">Depts Coordinated</div></div>', unsafe_allow_html=True)
 
         st.markdown("<br>", unsafe_allow_html=True)
-        st.subheader("⚡ Today's Live Operational Coordinated Timeline")
+        st.subheader(" Today's Live Operational Coordinated Timeline")
         st.caption("Real-time snapshot of scheduled maintenance blocks, AI recommendations, disruption risks, and affected trains.")
 
         timeline_data = []
