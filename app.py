@@ -137,7 +137,7 @@ def main():
     st.markdown('<div class="sub-header">Multi-Department Coordination • Train Schedule Impact • OR-Tools Constraint Optimization • Explainable AI</div>', unsafe_allow_html=True)
 
     # Sidebar Controls & Judge Demo Trigger
-    st.sidebar.image("https://img.icons8.com/color/96/000000/train.png", width=55)
+    # st.sidebar.image("", width=55)
     st.sidebar.title("Operations Control")
 
     st.sidebar.subheader(" Fast Demo Action")
