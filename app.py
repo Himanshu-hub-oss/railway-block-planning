@@ -133,7 +133,7 @@ def main():
     if 'approval_status' not in st.session_state:
         st.session_state.approval_status = {}
 
-    st.markdown('<div class="main-header">🚆 AI RAILWAY MAINTENANCE BLOCK OPTIMIZATION PLATFORM</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header"> AI RAILWAY MAINTENANCE BLOCK OPTIMIZATION PLATFORM</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Multi-Department Coordination • Train Schedule Impact • OR-Tools Constraint Optimization • Explainable AI</div>', unsafe_allow_html=True)
 
     # Sidebar Controls & Judge Demo Trigger
@@ -301,7 +301,7 @@ def main():
     # TAB 2: REALISTIC REQUEST WORKFLOW (Feature 2)
     # ---------------------------------------------------------
     with tabs[1]:
-        st.subheader("➕ Create & Submit Maintenance Disconnection Request")
+        st.subheader("Create & Submit Maintenance Disconnection Request")
         st.caption("Submit a new department request to trigger instant schedule validation, ML duration prediction, conflict detection, and block optimizer re-run.")
 
         with st.form("create_request_form"):
@@ -474,7 +474,7 @@ def main():
         df_map = processor.stations_df.dropna(subset=['lat', 'lng']).head(200).copy()
         df_map['status'] = 'Normal Station'
         
-        fig_map = px.scatter_mapbox(
+        fig_map = px.scatter_map(
             df_map,
             lat='lat',
             lon='lng',
@@ -484,7 +484,7 @@ def main():
             zoom=4,
             height=550
         )
-        fig_map.update_layout(mapbox_style="open-street-map", margin={"r":0,"t":0,"l":0,"b":0})
+        fig_map.update_layout(map_style="open-street-map", margin={"r":0,"t":0,"l":0,"b":0})
         st.plotly_chart(fig_map, use_container_width=True)
 
     # ---------------------------------------------------------
