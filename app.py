@@ -35,28 +35,47 @@ st.set_page_config(
 # Control Room Custom Styling
 st.markdown("""
     <style>
+
+    /* ===== MAIN APP BACKGROUND ===== */
     .stApp {
-        background-color: #0E1726;
-        color: #E0E6ED;
+        background-color: #FFFFFF !important;
+        color: #111827 !important;
     }
+
+    .main {
+        background-color: #FFFFFF !important;
+    }
+
+    [data-testid="stAppViewContainer"] {
+        background-color: #FFFFFF !important;
+    }
+
+    [data-testid="stHeader"] {
+        background-color: #FFFFFF !important;
+    }
+
+    /* ===== MAIN HEADER ===== */
     .main-header {
         font-size: 2.1rem;
         font-weight: 800;
-        color: #00D4FF;
+        color: #0284C7;
         text-align: center;
         margin-bottom: 0.2rem;
         letter-spacing: 1px;
     }
+
     .sub-header {
         font-size: 0.95rem;
-        color: #94A3B8;
+        color: #64748B;
         text-align: center;
         margin-bottom: 1.2rem;
     }
+
+    /* ===== STATUS BANNER ===== */
     .status-banner {
-        background: linear-gradient(90deg, #1E293B 0%, #0F172A 100%);
-        border: 1px solid #334155;
-        border-left: 5px solid #00E676;
+        background: linear-gradient(90deg, #F8FAFC 0%, #FFFFFF 100%);
+        border: 1px solid #CBD5E1;
+        border-left: 5px solid #16A34A;
         padding: 10px 15px;
         border-radius: 6px;
         margin-bottom: 15px;
@@ -64,54 +83,75 @@ st.markdown("""
         justify-content: space-between;
         align-items: center;
     }
+
     .status-online {
-        color: #00E676;
+        color: #16A34A;
         font-weight: bold;
         font-size: 1.1rem;
         letter-spacing: 1px;
     }
+
+    /* ===== KPI CARDS ===== */
     .kpi-card {
-        background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-        border: 1px solid #334155;
+        background: #FFFFFF;
+        border: 1px solid #CBD5E1;
         border-radius: 8px;
         padding: 12px;
         text-align: center;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
+
     .kpi-value {
         font-size: 1.7rem;
         font-weight: 700;
-        color: #00E676;
+        color: #16A34A;
     }
+
     .kpi-label {
         font-size: 0.8rem;
-        color: #94A3B8;
+        color: #64748B;
         text-transform: uppercase;
         font-weight: 600;
     }
+
+    /* ===== BADGES ===== */
     .badge-real {
         background-color: #15803D;
-        color: white;
+        color: #FFFFFF;
         padding: 2px 6px;
         border-radius: 4px;
         font-size: 0.75rem;
         font-weight: bold;
     }
+
     .badge-demo {
-        background-color: #C2410C;
-        color: white;
+        background-color: #EA580C;
+        color: #FFFFFF;
         padding: 2px 6px;
         border-radius: 4px;
         font-size: 0.75rem;
         font-weight: bold;
     }
+
+    /* ===== TIMELINE CARDS ===== */
     .timeline-card {
-        background: #1E293B;
-        border: 1px solid #334155;
+        background: #FFFFFF;
+        border: 1px solid #CBD5E1;
         padding: 10px;
         border-radius: 6px;
         margin-bottom: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.06);
     }
+
+    /* ===== GENERAL TEXT ===== */
+    h1, h2, h3, h4, h5, h6 {
+        color: #111827 !important;
+    }
+
+    p, label, span {
+        color: #334155;
+    }
+
     </style>
 """, unsafe_allow_html=True)
 
