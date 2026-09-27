@@ -164,15 +164,15 @@ p, label, span {
 /* ===== SIDEBAR LIGHT THEME ===== */
 
 section[data-testid="stSidebar"] {
-    background-color: #FFFFFF !important;
+    background-color: #F7F0E3 !important;
 }
 
 section[data-testid="stSidebar"] > div {
-    background-color: #FFFFFF !important;
+    background-color: #F7F0E3 !important;
 }
 
 [data-testid="stSidebarContent"] {
-    background-color: #FFFFFF !important;
+    background-color: #F7F0E3 !important;
 }
 
 /* Sidebar text */
@@ -190,7 +190,7 @@ section[data-testid="stSidebar"] div {
 /* Sidebar buttons */
 section[data-testid="stSidebar"] button {
     color: #0F172A !important;
-    background-color: #FFFFFF !important;
+    background-color: #F7F0E3 !important;
     border-color: #CBD5E1 !important;
 }
 
