@@ -54,105 +54,112 @@ st.markdown("""
         background-color: #FFFFFF !important;
     }
 
-    /* ===== MAIN HEADER ===== */
-    .main-header {
-        font-size: 2.1rem;
-        font-weight: 800;
-        color: #0284C7;
-        text-align: center;
-        margin-bottom: 0.2rem;
-        letter-spacing: 1px;
-    }
+  /* ===== MAIN HEADER ===== */
+.main-header { 
+    font-size: 2.1rem; 
+    font-weight: 800; 
+    color: #0284C7; 
+    text-align: center; 
+    margin-bottom: 0.2rem; 
+    letter-spacing: 1px; 
+} 
 
-    .sub-header {
-        font-size: 0.95rem;
-        color: #64748B;
-        text-align: center;
-        margin-bottom: 1.2rem;
-    }
+.sub-header { 
+    font-size: 0.95rem; 
+    color: #475569 !important; 
+    text-align: center; 
+    margin-bottom: 1.2rem; 
+} 
 
-    /* ===== STATUS BANNER ===== */
-    .status-banner {
-        background: linear-gradient(90deg, #F8FAFC 0%, #FFFFFF 100%);
-        border: 1px solid #CBD5E1;
-        border-left: 5px solid #16A34A;
-        padding: 10px 15px;
-        border-radius: 6px;
-        margin-bottom: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+/* ===== STATUS BANNER ===== */
+.status-banner { 
+    background: linear-gradient(90deg, #F8FAFC 0%, #FFFFFF 100%); 
+    border: 1px solid #CBD5E1; 
+    border-left: 5px solid #16A34A; 
+    padding: 10px 15px; 
+    border-radius: 6px; 
+    margin-bottom: 15px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    color: #0F172A !important;
+}
 
-    .status-online {
-        color: #16A34A;
-        font-weight: bold;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-    }
+.status-banner p,
+.status-banner span,
+.status-banner div {
+    color: #0F172A !important;
+}
 
-    /* ===== KPI CARDS ===== */
-    .kpi-card {
-        background: #FFFFFF;
-        border: 1px solid #CBD5E1;
-        border-radius: 8px;
-        padding: 12px;
-        text-align: center;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
+.status-online { 
+    color: #16A34A !important; 
+    font-weight: bold; 
+    font-size: 1.1rem; 
+    letter-spacing: 1px; 
+} 
 
-    .kpi-value {
-        font-size: 1.7rem;
-        font-weight: 700;
-        color: #16A34A;
-    }
+/* ===== KPI CARDS ===== */
+.kpi-card { 
+    background: #FFFFFF; 
+    border: 1px solid #CBD5E1; 
+    border-radius: 8px; 
+    padding: 12px; 
+    text-align: center; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08); 
+} 
 
-    .kpi-label {
-        font-size: 0.8rem;
-        color: #64748B;
-        text-transform: uppercase;
-        font-weight: 600;
-    }
+.kpi-value { 
+    font-size: 1.7rem; 
+    font-weight: 700; 
+    color: #16A34A; 
+} 
 
-    /* ===== BADGES ===== */
-    .badge-real {
-        background-color: #15803D;
-        color: #FFFFFF;
-        padding: 2px 6px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: bold;
-    }
+.kpi-label { 
+    font-size: 0.8rem; 
+    color: #334155 !important; 
+    text-transform: uppercase; 
+    font-weight: 600; 
+} 
 
-    .badge-demo {
-        background-color: #EA580C;
-        color: #FFFFFF;
-        padding: 2px 6px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: bold;
-    }
+/* ===== BADGES ===== */
+.badge-real { 
+    background-color: #15803D; 
+    color: #FFFFFF !important; 
+    padding: 2px 6px; 
+    border-radius: 4px; 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+} 
 
-    /* ===== TIMELINE CARDS ===== */
-    .timeline-card {
-        background: #FFFFFF;
-        border: 1px solid #CBD5E1;
-        padding: 10px;
-        border-radius: 6px;
-        margin-bottom: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-    }
+.badge-demo { 
+    background-color: #EA580C; 
+    color: #FFFFFF !important; 
+    padding: 2px 6px; 
+    border-radius: 4px; 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+} 
 
-    /* ===== GENERAL TEXT ===== */
-    h1, h2, h3, h4, h5, h6 {
-        color: #111827 !important;
-    }
+/* ===== TIMELINE CARDS ===== */
+.timeline-card { 
+    background: #FFFFFF; 
+    border: 1px solid #CBD5E1; 
+    padding: 10px; 
+    border-radius: 6px; 
+    margin-bottom: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.06); 
+    color: #0F172A !important;
+} 
 
-    p, label, span {
-        color: #334155;
-    }
+/* ===== GENERAL TEXT ===== */
+h1, h2, h3, h4, h5, h6 { 
+    color: #0F172A !important; 
+} 
 
-    </style>
+p, label, span { 
+    color: #0F172A !important; 
+}
+</style>
 """, unsafe_allow_html=True)
 
 @st.cache_resource
