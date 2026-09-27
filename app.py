@@ -27,7 +27,7 @@ from emergency_mode import EmergencyBlockEngine
 # Page Config
 st.set_page_config(
     page_title="AI Railway Maintenance Block Optimization Platform",
-    # page_icon="",
+    page_icon="🚆",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -35,176 +35,84 @@ st.set_page_config(
 # Control Room Custom Styling
 st.markdown("""
     <style>
-
-    /* ===== MAIN APP BACKGROUND ===== */
     .stApp {
-        background-color: #FFFFFF !important;
-        color: #111827 !important;
+        background-color: #0E1726;
+        color: #E0E6ED;
     }
-
-    .main {
-        background-color: #FFFFFF !important;
+    .main-header {
+        font-size: 2.1rem;
+        font-weight: 800;
+        color: #00D4FF;
+        text-align: center;
+        margin-bottom: 0.2rem;
+        letter-spacing: 1px;
     }
-
-    [data-testid="stAppViewContainer"] {
-        background-color: #FFFFFF !important;
+    .sub-header {
+        font-size: 0.95rem;
+        color: #94A3B8;
+        text-align: center;
+        margin-bottom: 1.2rem;
     }
-
-    [data-testid="stHeader"] {
-        background-color: #FFFFFF !important;
+    .status-banner {
+        background: linear-gradient(90deg, #1E293B 0%, #0F172A 100%);
+        border: 1px solid #334155;
+        border-left: 5px solid #00E676;
+        padding: 10px 15px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-
-  /* ===== MAIN HEADER ===== */
-.main-header { 
-    font-size: 2.1rem; 
-    font-weight: 800; 
-    color: #0284C7; 
-    text-align: center; 
-    margin-bottom: 0.2rem; 
-    letter-spacing: 1px; 
-} 
-
-.sub-header { 
-    font-size: 0.95rem; 
-    color: #475569 !important; 
-    text-align: center; 
-    margin-bottom: 1.2rem; 
-} 
-
-/* ===== STATUS BANNER ===== */
-.status-banner { 
-    background: linear-gradient(90deg, #F8FAFC 0%, #FFFFFF 100%); 
-    border: 1px solid #CBD5E1; 
-    border-left: 5px solid #16A34A; 
-    padding: 10px 15px; 
-    border-radius: 6px; 
-    margin-bottom: 15px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    color: #0F172A !important;
-}
-
-.status-banner p,
-.status-banner span,
-.status-banner div {
-    color: #0F172A !important;
-}
-
-.status-online { 
-    color: #16A34A !important; 
-    font-weight: bold; 
-    font-size: 1.1rem; 
-    letter-spacing: 1px; 
-} 
-
-/* ===== KPI CARDS ===== */
-.kpi-card { 
-    background: #FFFFFF; 
-    border: 1px solid #CBD5E1; 
-    border-radius: 8px; 
-    padding: 12px; 
-    text-align: center; 
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08); 
-} 
-
-.kpi-value { 
-    font-size: 1.7rem; 
-    font-weight: 700; 
-    color: #16A34A; 
-} 
-
-.kpi-label { 
-    font-size: 0.8rem; 
-    color: #334155 !important; 
-    text-transform: uppercase; 
-    font-weight: 600; 
-} 
-
-/* ===== BADGES ===== */
-.badge-real { 
-    background-color: #15803D; 
-    color: #FFFFFF !important; 
-    padding: 2px 6px; 
-    border-radius: 4px; 
-    font-size: 0.75rem; 
-    font-weight: bold; 
-} 
-
-.badge-demo { 
-    background-color: #EA580C; 
-    color: #FFFFFF !important; 
-    padding: 2px 6px; 
-    border-radius: 4px; 
-    font-size: 0.75rem; 
-    font-weight: bold; 
-} 
-
-/* ===== TIMELINE CARDS ===== */
-.timeline-card { 
-    background: #FFFFFF; 
-    border: 1px solid #CBD5E1; 
-    padding: 10px; 
-    border-radius: 6px; 
-    margin-bottom: 8px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.06); 
-    color: #0F172A !important;
-} 
-
-/* ===== GENERAL TEXT ===== */
-h1, h2, h3, h4, h5, h6 { 
-    color: #0F172A !important; 
-} 
-
-p, label, span { 
-    color: #0F172A !important; 
-}
-
-
-/* ===== SIDEBAR LIGHT THEME ===== */
-
-section[data-testid="stSidebar"] {
-    background-color: #F7F0E3 !important;
-}
-
-section[data-testid="stSidebar"] > div {
-    background-color: #F7F0E3 !important;
-}
-
-[data-testid="stSidebarContent"] {
-    background-color: #F7F0E3 !important;
-}
-
-/* Sidebar text */
-section[data-testid="stSidebar"] h1,
-section[data-testid="stSidebar"] h2,
-section[data-testid="stSidebar"] h3,
-section[data-testid="stSidebar"] h4,
-section[data-testid="stSidebar"] p,
-section[data-testid="stSidebar"] span,
-section[data-testid="stSidebar"] label,
-section[data-testid="stSidebar"] div {
-    color: #0F172A !important;
-}
-
-/* Sidebar buttons */
-section[data-testid="stSidebar"] button {
-    color: #0F172A !important;
-    background-color: #F7F0E3 !important;
-    border-color: #CBD5E1 !important;
-}
-
-section[data-testid="stSidebar"] button p,
-section[data-testid="stSidebar"] button span {
-    color: #0F172A !important;
-}
-
-/* Lines */
-section[data-testid="stSidebar"] hr {
-    border-color: #CBD5E1 !important;
-}
-
-</style>
+    .status-online {
+        color: #00E676;
+        font-weight: bold;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    .kpi-card {
+        background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+        border: 1px solid #334155;
+        border-radius: 8px;
+        padding: 12px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+    }
+    .kpi-value {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: #00E676;
+    }
+    .kpi-label {
+        font-size: 0.8rem;
+        color: #94A3B8;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .badge-real {
+        background-color: #15803D;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+    .badge-demo {
+        background-color: #C2410C;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+    .timeline-card {
+        background: #1E293B;
+        border: 1px solid #334155;
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 8px;
+    }
+    </style>
 """, unsafe_allow_html=True)
 
 @st.cache_resource
@@ -229,7 +137,7 @@ def main():
     st.markdown('<div class="sub-header">Multi-Department Coordination • Train Schedule Impact • OR-Tools Constraint Optimization • Explainable AI</div>', unsafe_allow_html=True)
 
     # Sidebar Controls & Judge Demo Trigger
-    # st.sidebar.image("", width=55)
+    st.sidebar.image("https://img.icons8.com/color/96/000000/train.png", width=55)
     st.sidebar.title("Operations Control")
 
     st.sidebar.subheader(" Fast Demo Action")
@@ -354,7 +262,7 @@ def main():
             st.markdown(f'<div class="kpi-card"><div class="kpi-value">3</div><div class="kpi-label">Depts Coordinated</div></div>', unsafe_allow_html=True)
 
         st.markdown("<br>", unsafe_allow_html=True)
-        st.subheader(" Today's Live Operational Coordinated Timeline")
+        st.subheader("⚡ Today's Live Operational Coordinated Timeline")
         st.caption("Real-time snapshot of scheduled maintenance blocks, AI recommendations, disruption risks, and affected trains.")
 
         timeline_data = []
@@ -393,7 +301,7 @@ def main():
     # TAB 2: REALISTIC REQUEST WORKFLOW (Feature 2)
     # ---------------------------------------------------------
     with tabs[1]:
-        st.subheader("Create & Submit Maintenance Disconnection Request")
+        st.subheader(" Create & Submit Maintenance Disconnection Request")
         st.caption("Submit a new department request to trigger instant schedule validation, ML duration prediction, conflict detection, and block optimizer re-run.")
 
         with st.form("create_request_form"):
@@ -566,7 +474,7 @@ def main():
         df_map = processor.stations_df.dropna(subset=['lat', 'lng']).head(200).copy()
         df_map['status'] = 'Normal Station'
         
-        fig_map = px.scatter_map(
+        fig_map = px.scatter_mapbox(
             df_map,
             lat='lat',
             lon='lng',
@@ -576,7 +484,7 @@ def main():
             zoom=4,
             height=550
         )
-        fig_map.update_layout(map_style="open-street-map", margin={"r":0,"t":0,"l":0,"b":0})
+        fig_map.update_layout(mapbox_style="open-street-map", margin={"r":0,"t":0,"l":0,"b":0})
         st.plotly_chart(fig_map, use_container_width=True)
 
     # ---------------------------------------------------------
