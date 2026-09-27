@@ -159,6 +159,51 @@ h1, h2, h3, h4, h5, h6 {
 p, label, span { 
     color: #0F172A !important; 
 }
+
+
+/* ===== SIDEBAR LIGHT THEME ===== */
+
+section[data-testid="stSidebar"] {
+    background-color: #FFFFFF !important;
+}
+
+section[data-testid="stSidebar"] > div {
+    background-color: #FFFFFF !important;
+}
+
+[data-testid="stSidebarContent"] {
+    background-color: #FFFFFF !important;
+}
+
+/* Sidebar text */
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] h4,
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] div {
+    color: #0F172A !important;
+}
+
+/* Sidebar buttons */
+section[data-testid="stSidebar"] button {
+    color: #0F172A !important;
+    background-color: #FFFFFF !important;
+    border-color: #CBD5E1 !important;
+}
+
+section[data-testid="stSidebar"] button p,
+section[data-testid="stSidebar"] button span {
+    color: #0F172A !important;
+}
+
+/* Lines */
+section[data-testid="stSidebar"] hr {
+    border-color: #CBD5E1 !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
